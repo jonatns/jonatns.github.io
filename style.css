@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #E0E0E0 !important;
+}
+
+.wrapper {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+#content {
+  padding-left: 25px;
+  padding-bottom: 25px;
+}
+
+#circle {
+  min-width: 50px;
+}
+
+.sub-header {
+  padding-left: 12px;
+}

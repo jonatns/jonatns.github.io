@@ -1,1 +1,143 @@
-Hello World
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jonathan Navarrete</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.8.0/css/alertify.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.8.0/css/themes/semantic.min.css"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="ui container">
+        <div class="ui piled segment">
+          <button class="blue circular ui right floated icon button">
+            <i class="file pdf outline icon"></i>
+          </button>
+          <div class="ui center aligned fluid container">
+            <h2 class="ui center aligned icon header">
+              <img class="ui circular image" src="/images/me.jpg">
+              <br>
+              Jonathan Navarrete
+            </h2>
+            <div class="ui label">
+              <i class="map pin icon"></i>Aibonito, PR
+            </div>
+            <div class="ui label">
+              <i class="mail icon"></i>jonatns@gmail.com
+              <a id="copy-btn" class="detail">Copy</a>
+            </div>
+          </div>
+          <br>
+          <div id="content" class="ui left aligned container">
+            <h4 class="ui dividing header">
+              <i class="student icon"></i>
+              Education
+            </h4>
+            <div class="ui list">
+              <div class="item">
+                <div class="header">University of Puerto Rico, Bayamón</div>
+                <span class="sub-header">B.S. Computer Science (August 2012 - May 2017)</span>
+              </div>
+            </div>
+            <h4 class="ui dividing header">
+              <i class="suitcase icon"></i>
+              Work Experience
+            </h4>
+            <div class="ui list">
+              <div class="item">
+                <div class="header"><a target="_blank" href="http://guavalabs.io">Guava Labs LLC</a> Cofounder and CTO (July 2016 - Present)</div>
+                <div class="ui bulleted list">
+                  <div class="item">Optimization labs providing business intelligence solutions in order to optimize customers businesses</div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="header"><a target="_blank" href="http://prwss.com">PR Web Sites & Systems, Inc.</a> Web Developer (February 2015 - June 2016)</div>
+                <div class="ui bulleted list">
+                  <div class="item">Developed and redesigned many web pages using modern technologies</div>
+                  <div class="item">
+                    Redesigned, implemented security measures and finished Beta version of
+                    <a target="_blank" href="http://saludfinancierapr.com">saludfinancierapr.com</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="header"><a target="_blank" href="http://spotery.com">Spotery Summer Internship</a> Java Developer (May 2015 - August 2015)</div>
+                <div class="ui bulleted list">
+                  <div class="item">Developed many reusable web components</div>
+                  <div class="item">Worked as the Subversion to Git migration lead</div>
+                  <div class="item">Gained team work experience using Agile Development (Scrum)</div>
+                </div>
+              </div>
+            </div>
+            <h4 class="ui dividing header">
+              <i class="coffee icon"></i>
+              Projects
+            </h4>
+            <div class="ui list">
+              <div class="item">
+                <div class="header">Tailtask - <a target="_blank" href="https://tailtask.herokuapp.com">tailtask.herokuapp.com</a> (May 2016 - Present)</div>
+                <div class="ui bulleted list">
+                  <div class="item">Web and mobile application</div>
+                  <div class="item">Field services management platform that provides optimization tools for small businesses</div>
+                  <div class="item">Companies can create and dispatch tasks to their employees in realtime</div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="header">Other projects - <a target="_blank" href="https://github.com/jonatns">github.com/jonatns</a></div>
+                <div class="ui bulleted list">
+                  <div class="item">My github page</div>
+                </div>
+              </div>
+            </div>
+            <h4 class="ui dividing header">
+              <i class="laptop icon"></i>
+              Skills
+            </h4>
+            <div class="ui list">
+              <div class="item">
+                <div class="header">Web Development</div>
+                <span class="sub-header">Experience with JavaScript (NodeJS, ExpressJS, EmberJS, AngularJS, jQuery), SQL, noSQL, HTML, and CSS</span><br>
+              </div>
+              <div class="item">
+                <div class="header">Other Programming Languages</div>
+                <span class="sub-header">Experience with Java, C/C++ and Swift</span><br>
+              </div>
+              <div class="item">
+                <div class="header">Misc Technologies</div>
+                <span class="sub-header">Experience with Oracle, MySQL, mongoDB, AWS, Digital Ocean, Heroku, Ubuntu, Bash, Trello, Atlassian JIRA, Git and Subversion</span><br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="//cdn.jsdelivr.net/alertifyjs/1.8.0/alertify.min.js"></script>
+    <script type="text/javascript">
+    document.getElementById("copy-btn").addEventListener("click", function() {
+      var input = document.createElement("input");
+
+      input.setAttribute("value", "jonatns@gmail.com");
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand("copy");
+      document.body.removeChild(input);
+
+      var notification = alertify.notify('Email copied!', 'success', 4);
+
+    }, false);
+    </script>
+  </body>
+</html>
